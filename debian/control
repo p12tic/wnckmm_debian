@@ -1,0 +1,68 @@
+Source: libwnckmm-1.0
+Section: libs
+Priority: extra
+Maintainer: Povilas Kanapickas <povilas@radix.lt>
+Homepage: http://github.com/p12tic/libwnckmm
+Build-Depends: debhelper (>= 9),
+               autotools-dev,
+               libwnck-dev (>= 2.30.0),
+               libgtk2.0-dev (>= 2.24.0),
+               libglibmm-2.4-dev (>= 2.30.0),
+               mm-common (>= 0.9.5)
+Standards-Version: 3.9.4
+
+Package: libwnckmm-1.0-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+         libwnckmm-1.0-0 (= ${binary:Version}),
+         libgtk2.0-dev (>= 2.24.0),
+         libglibmm-2.4-dev (>= 2.27.93),
+         libpangomm-1.4-dev (>= 2.27.1),
+         libatkmm-1.6-dev (>= 2.22.2)
+Suggests: libwnckmm-1.0-doc
+Description: C++ wrappers for WNCK (development files)
+ Wnckmm is a C++ interface for the popular Window Navigation Constructor Kit.
+ .
+ This package contains development files.
+
+Package: libwnckmm-1.0-0
+Section: libs
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
+Description: C++ wrappers for WNCK (shared libraries)
+ Wnckmm is a C++ interface for the popular Window Navigation Constructor Kit.
+ .
+ This package contains shared libraries.
+
+Package: libwnckmm-1.0-dbg
+Section: debug
+Priority: extra
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+         libwnckmm-1.0-0 (= ${binary:Version})
+Description: C++ wrappers for WNCK (debug symbols)
+ Wnckmm is a C++ interface for the popular Window Navigation Constructor Kit.
+ .
+ This package contains debug symbols for debugging applications using wnckmm.
+
+Package: libwnckmm-1.0-doc
+Section: doc
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+         lynx | www-browser,
+         doc-base
+Recommends: gtkmm-documentation
+Description: C++ wrappers for WNCK (documentation)
+ Wnckmm is a C++ interface for the popular Window Navigation Constructor Kit.
+ .
+ This package contains FAQ, and reference documentation.
